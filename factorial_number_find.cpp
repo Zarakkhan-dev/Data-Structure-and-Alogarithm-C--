@@ -1,29 +1,15 @@
 #include<iostream>
-#include <stdlib.h>
-#include<conio.h> 
+#include<conio.h>
 using namespace std;
 
 
-void Scholarship_Checker(float cgpa){
-
-	
-	 if(cgpa >= 3.5 && cgpa <=4){
-	 	cout << "Full-funded Scholarship Applied \n";
-	 }
-	 else if(cgpa >= 3.0 && cgpa < 3.5 )
-	 {
-	 	cout << "20% scholarship Applied \n";
-	 }
-	 else if(cgpa <= 3.5 && cgpa >=2.5 ){
-	 	cout << "Only Eligible for admission,Scholarship not applicable \n";
-	 }
-	 else if(cgpa < 2.5 && cgpa > 1){
-	 	cout << "Not Elgible for Admission \n";
-	 }
-	 else{
-	 	cout << "Enter the Invalid cgpa Correct the cgpa  from 1 to 4 \n";
-	 }
-	
+int factorial(int n ){
+	if(n == 1){
+		return n;
+	}
+	else{
+		return n* factorial(n-1);
+	}
 }
 
 void Menu_Selection_Display(){
@@ -32,16 +18,17 @@ void Menu_Selection_Display(){
 	cout <<"|                  Welcome to The Zarak Khan Program                  |\n";
 	cout <<"|_____________________________________________________________________|\n";
 	cout <<"|                                                                     |\n";
-	cout <<"|                    Eligibility of Scholarship                       |\n";
+	cout <<"|                     Find the Factorial Number                       |\n";
 	cout <<"|_____________________________________________________________________|\n";
 	cout <<"|                                                                     |\n";
-	cout <<"|                      1 : Check Eligibility                          |\n";
+	cout <<"|                      1 : Enter The Number                           |\n";
 	cout <<"|                                                                     |\n";
 	cout <<"|                      2 : Exit                                       |\n";
 	cout <<"|                                                                     |\n";
 	cout <<" =====================================================================\n";
 }
 int main(){
+	
 	int selection ;
 	
 	while(selection!=2){
@@ -50,10 +37,10 @@ int main(){
 		cin>>selection;
          system("cls");
 		if(selection == 1){
-			float number;
-			cout << "Enter your CGPA : " ;
+			int number;
+			cout << "Enter The number to find the Factorial of Number : ";
 			cin >> number;
-			Scholarship_Checker(number);
+			cout << "Factorial of Number is : " << factorial(number);
 		     getch(); 
 		     system("cls");
 	    }
@@ -64,4 +51,5 @@ int main(){
 		
 	}
 
+	
 }
